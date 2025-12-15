@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useAuthenticator } from '@aws-amplify/ui-react';
 import type { Schema } from "../amplify/data/resource";
 import { generateClient } from "aws-amplify/data";
+import FileUploadButton from "./components/FileUploadButton";
 
 const client = generateClient<Schema>();
 
@@ -26,7 +27,7 @@ function App() {
   return (
     <main>
             <h1>{user?.signInDetails?.loginId} todos</h1>
-      <button onClick={createTodo}>+ new</button>
+      <FileUploadButton buttonText="+ new" />
       <ul>
         {todos.map((todo) => (
           <li 
