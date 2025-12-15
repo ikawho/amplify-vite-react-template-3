@@ -22,24 +22,20 @@ function App() {
 
   return (
     <main>
-            <h1>{user?.signInDetails?.loginId} todos</h1>
-      <FileUploadButton buttonText="+ new" />
+            <h1>Your ride analyzer</h1>
+      <FileUploadButton buttonText="+ UPLOAD" />
       <ul>
         {todos.map((todo) => (
-          <li 
-          onClick={() => deleteTodo(todo.id)}
-          key={todo.id}>{todo.content}
-          </li>
+          <li key={todo.id}></li>
         ))}
       </ul>
       <div>
-        🥳 App successfully hosted. Try creating a new todo.
+        App successfully hosted. Try uploading a .fit-File
         <br />
-        <a href="https://docs.amplify.aws/react/start/quickstart/#make-frontend-updates">
-          Review next step of this tutorial.
-        </a>
       </div>
-      <button onClick={signOut}>Sign out</button>
+      <button onClick={signOut} style={{ marginTop: "12px" }}>
+      Sign out
+      </button>
     </main>
   );
 }

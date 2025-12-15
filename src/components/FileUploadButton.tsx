@@ -78,7 +78,7 @@ export default function FileUploadButton({
 
       // optional callback (z.B. in Todo-Liste anzeigen)
       onUploaded?.(objectKey);
-      alert("Upload erfolgreich!");
+      alert("Upload successful!");
     } catch (err: any) {
       console.error(err);
       alert(err?.message ?? "Upload fehlgeschlagen");
