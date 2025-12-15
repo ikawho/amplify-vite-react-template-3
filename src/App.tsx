@@ -16,6 +16,10 @@ function App() {
     });
   }, []);
 
+  function deleteTodo(id: string) {
+    client.models.Todo.delete({ id })
+  }
+
   return (
     <main>
             <h1>{user?.signInDetails?.loginId} todos</h1>
