@@ -16,13 +16,10 @@ function App() {
     });
   }, []);
 
-  function deleteTodo(id: string) {
-    client.models.Todo.delete({ id })
-  }
-
   return (
     <main>
             <h1>Your ride analyzer</h1>
+            <h3>{user?.signInDetails?.loginId}</h3>
       <FileUploadButton buttonText="+ UPLOAD" />
       <ul>
         {todos.map((todo) => (
