@@ -3,17 +3,31 @@ body {
   background: linear-gradient(180deg, rgb(117, 81, 194), rgb(255, 255, 255));
   display: flex;
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  height: 100vh;
+
+  min-height: 100vh;     /* statt height */
   width: 100vw;
+
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;  /* statt center */
+
+  padding-top: 48px;     /* optional: “mehr Luft” oben */
+  padding-bottom: 48px;  /* optional: “mehr Luft” unten */
 }
+
 
 main {
   display: flex;
   flex-direction: column;
-  align-items: stretch;
+  align-items: center;    /* geändert: statt stretch */
   text-align: center;
+  gap: 16px;              /* neu: Abstand zwischen Elementen */
+  width: 100%;            /* neu */
+  max-width: 900px;       /* neu: passt zur Chart-Card */
+}
+
+/* neu: alle direkten Kinder im main nehmen die volle Breite */
+main > * {
+  width: 100%;
 }
 
 button {
